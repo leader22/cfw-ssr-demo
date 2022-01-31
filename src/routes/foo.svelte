@@ -1,10 +1,17 @@
 <script context="module">
+  export async function load() {
+    return {
+      props: {
+        value: Math.random(),
+      },
+    };
+  }
   export const hydrate = false;
 </script>
 <script>
-  let random = Math.random();
+  export let value;
 </script>
 
 <p>
-  "{random}" from server!
+  "{value}" from server!
 </p>
