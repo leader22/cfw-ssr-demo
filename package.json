@@ -9,7 +9,7 @@
     "clean": "rimraf */build/",
     "deploy": "wrangler publish",
     "serve": "node server/index.js",
-    "dev": "miniflare -w workers-site/build/index.js",
+    "dev": "miniflare -w --site ./public --live-reload workers-site/build/index.js",
     "start": "wrangler dev"
   },
   "devDependencies": {
