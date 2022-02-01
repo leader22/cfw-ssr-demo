@@ -1,0 +1,19 @@
+class {
+    onCreate() {
+        this.state = {
+            count: Date.now()
+        };
+    }
+    increment() {
+        this.state.count++;
+    }
+}
+
+<button on-click("increment")>${state.count}</button>
+
+<style>
+button {
+  padding: 3rem;
+  font-size: 4rem;
+}
+</style>

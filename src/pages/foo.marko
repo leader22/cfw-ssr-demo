@@ -1,15 +1,6 @@
-class {
-    onCreate() {
-        this.state = {
-            count: Date.now(),
-        };
-    }
-    increment() {
-        this.state.count++;
-    }
-}
-
-<app-layout title="Welcome to FOO">
-  <div>SSR: ${state.count}</div>
-  <button on-click("increment")>Click me!</button>
+<app-layout title="Welcome to Foo">
+  <main>
+    <my-button />
+  </main>
 </app-layout>
+

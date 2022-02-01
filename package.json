@@ -1,5 +1,5 @@
 {
-  "name": "marko-cloudflare-workers",
+  "name": "my-app",
   "description": "",
   "version": "1.0.0",
   "devDependencies": {
@@ -21,6 +21,7 @@
     "build": "rimraf dist && npm run build:worker && npm run build:client",
     "build:client": "cross-env NODE_ENV=production vite build",
     "build:worker": "cross-env NODE_ENV=production vite build --ssr src/worker.js",
+    "start": "miniflare -w --live-reload dist/worker.js",
     "dev": "node --no-warnings --enable-source-maps src/dev-server.js",
     "dev:inspect": "node --inspect --no-warnings --enable-source-maps src/dev-server.js",
     "preview": "npx wrangler dev"
