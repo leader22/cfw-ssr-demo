@@ -1,0 +1,17 @@
+class {
+    onCreate() {
+        this.state = {
+            count: 0,
+        };
+console.log(this.state);
+    }
+    increment() {
+        this.state.count++;
+console.log(this.state);
+    }
+}
+
+<app-layout title="Welcome to FOO">
+  <div>SSR: ${state.count}</div>
+  <button on-click("increment")>Click me!</button>
+</app-layout>
