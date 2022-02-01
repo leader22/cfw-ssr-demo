@@ -1,0 +1,34 @@
+{
+  "name": "qwik-app",
+  "version": "0.0.1",
+  "description": "Blank starter app",
+  "scripts": {
+    "build": "npm run clean && npm run build.client && npm run build.server",
+    "build.client": "rollup -c",
+    "build.server": "rollup -c rollup.config.server.js",
+    "clean": "rimraf */build/",
+    "deploy": "wrangler publish",
+    "serve": "node server/index.js",
+    "dev": "miniflare -w workers-site/build/index.js",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "0.0.16-6",
+    "@cloudflare/kv-asset-handler": "^0.2.0",
+    "@cloudflare/workers-types": "^3.2.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-sucrase": "^4.0.2",
+    "@types/service-worker-mock": "^2.0.1",
+    "miniflare": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.59.0",
+    "typescript": "^4.5.2"
+  },
+  "author": "Builder.io Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.14.0"
+  }
+}
