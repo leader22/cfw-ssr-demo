@@ -1,13 +1,11 @@
 class {
     onCreate() {
         this.state = {
-            count: 0,
+            count: Date.now(),
         };
-console.log(this.state);
     }
     increment() {
         this.state.count++;
-console.log(this.state);
     }
 }
 
